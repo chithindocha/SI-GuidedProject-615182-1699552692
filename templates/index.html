@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="icon" href="static\images\logo.png">
+
+    <style>
+        body {
+            background-color: #d4a3ae;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        center {
+            text-align: left;
+        }
+
+        table {
+            max-width: 400px;
+            width: 100%;
+            border-collapse: collapse;
+            border: none
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        input {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-left: 8px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+
+        <h1> River Water Quality Forecasting </h1><br>
+        
+        <form action="/predict" method="post">
+        
+            <table>
+                <tr>
+                    <th><label for="ph">PH:</label></th>
+                    <td><input type="text" name="ph" required placeholder="Enter PH value"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="Hardness">Hardness:</label></th>
+                    <td><input type="text" name="Hardness" required placeholder="Enter Hardness value"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="Solids">Solids:</label></th>
+                    <td><input type="text" name="Solids" placeholder="Enter Solids value"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="Chloramines">Chloramines:</label></th>
+                    <td><input type="text" name="Chloramines" required placeholder="Enter Chloramines value"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="Sulfate">Sulfate:</label></th>
+                    <td><input type="text" name="Sulfate" required placeholder="Enter Sulfate value"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="Conductivity">Conductivity:</label></th>
+                    <td><input type="text" name="Conductivity" required placeholder="Enter Conductivity value"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="Organic_carbon">Organic_carbon:</label></th>
+                    <td><input type="text" name="Organic_carbon" required placeholder="Enter Organic_carbon value"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="Trihalomethanes">Trihalomethanes:</label></th>
+                    <td><input type="text" name="Trihalomethanes" required placeholder="Enter Trihalomethanes value"></td>
+                </tr>
+    
+                <tr>
+                    <th><label for="Turbidity">Turbidity:</label></th>
+                    <td><input type="text" name="Turbidity" required placeholder="Enter Turbidity value"></td>
+                </tr>
+            </table>
+    
+            <button type="submit">Predict</button>
+        </form>
+        
+    </center>
+
+</body>
+</html>
